@@ -1,10 +1,10 @@
 # Special Input/Output
 Team #
-1. teamlid 
-2. teamlid
-3. teamlid
+1. Shailesh Chotoe 
+2. Lucas de Jonghe
 
 [Projectmanagment]() <Trello scrumboard bijvoorbeeld>
+  https://trello.com/b/lrKpXWWC/trace-project
 
 ## Ontwerp
 Beschrijf hier kort jullie project

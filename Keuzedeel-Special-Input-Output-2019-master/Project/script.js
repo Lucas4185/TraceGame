@@ -80,7 +80,7 @@ else if(navigator.getUserMedia) { // Standard
         ctx.fillRect((points[i].x - xSpace/2), (points[i].y - ySpace/2), xSpace, ySpace);
         ctx.fillStyle = "rgba(0,0,0,0)";
         ctx.fillRect(points[i].x, points[i].y, 1, 1);
-        if ((percentageRGB[0] + percentageRGB[1] + percentageRGB[2] / 3) < 100)
+        if ((percentageRGB[0] + percentageRGB[1] + percentageRGB[2] / 3) < 90)
         {
           ctx.fillStyle = "rgba(50,50,50,1)";
           ctx.fillRect((points[i].x - xSpace/2), (points[i].y - ySpace/2), xSpace, ySpace);

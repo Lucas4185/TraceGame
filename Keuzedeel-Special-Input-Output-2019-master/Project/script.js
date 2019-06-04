@@ -16,7 +16,6 @@ let ySpace = canvas.height/offset;
 let lijnSpacing = 5;
 var gameStarted = false;
 
-
 // Get access to the camera!
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now

@@ -25,7 +25,6 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         video.play();
     });
 }
-
 else if(navigator.getUserMedia) { // Standard
     navigator.getUserMedia({ video: true }, function(stream) {
         video.src = stream;
@@ -91,11 +90,6 @@ else if(navigator.getUserMedia) { // Standard
         }
       }
     }
-  }
-
-  function Draw()
-  {
-
   }
 
 function setBackground()

@@ -8,22 +8,22 @@ enemy.src = "img/enemy2.gif";
 enemy.pos = 1500;
 
   //newly spawned objects start at Y=25
-  var spawnLineY=-5;
+  var spawnLineY = -5;
 
   // spawn a new object every 1500ms
-  var spawnRate=2000;
+  var spawnRate = 2000;
 
   // set how fast the objects will fall
-  var spawnRateOfDescent=0.50;
+  var spawnRateOfDescent = 0.50;
 
   // when was the last object spawned
-  var lastSpawn=-1;
+  var lastSpawn = -1;
 
   // this array holds all spawned object
-  var objects=[];
+  var objects = [];
 
   // save the starting time (used to calc elapsed time)
-  var startTime=Date.now();
+  var startTime = Date.now();
 
   // start animating
   animate();
@@ -42,7 +42,7 @@ enemy.pos = 1500;
       if(Math.random()<0.50){t="red";}else{t="blue";}
 
       // create the new object
-      var object={
+      var object = {
           // set this objects type
           type:t,
           // set x randomly but at least 15px off the canvas edges
@@ -58,11 +58,11 @@ enemy.pos = 1500;
   function animate(){
 
       // get the elapsed time
-      var time=Date.now();
+      var time = Date.now();
 
       // see if its time to spawn a new object
-      if(time>(lastSpawn+spawnRate)){
-          lastSpawn=time;
+      if(time > (lastSpawn+spawnRate)){
+          lastSpawn = time;
           spawnRandomObject();
       }
 
@@ -79,8 +79,8 @@ enemy.pos = 1500;
       ctx.stroke();
 
       // move each object down the canvas
-      for(var i=0;i<objects.length;i++){
-          var object=objects[i];
+      for(var i = 0; i < objects.length; i++){
+          var object = objects[i];
           object.y+=spawnRateOfDescent;
           ctx.beginPath();
           ctx.arc(object.x,object.y,8,0,Math.PI*2);
@@ -89,7 +89,7 @@ enemy.pos = 1500;
           ctx.translate(enemy.pos,100);
           ctx.drawImage(enemy,-enemy.width/2,-enemy.height/2);
           ctx.restore();
-          ctx.fillStyle=object.type;
+          ctx.fillStyle = object.type;
           ctx.fill();
       }
   }
